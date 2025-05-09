@@ -1,0 +1,53 @@
+.ImgFileButtonPopUp_con {
+    /* border: 2px solid black; */
+    height: 88vh;
+    top: 10vh;
+    width: 82vw;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgFileButtonPopUp_con_in {
+    /* border: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 15px;
+    height: 85%;
+    width: 65%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ImgFileButtonPopUp_img {
+    /* border: 2px solid black; */
+    height: 350px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.ImgFileButtonPopUp_file {
+    /* border: 2px solid black; */
+    height: 60px;
+    width: 70%;
+
+
+}
+
+.ImgFileButtonPopUp_button {
+    /* border: 2px solid black; */
+    height: 100px;
+    width: 70%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+}

@@ -1,0 +1,11 @@
+.contained {
+    background-color: var(--primariColor);
+    width: 130px;
+}
+
+.outlined {
+    border: 2px solid var(--primariColor);
+    color: var(--primariColor);
+    width: 130px;
+    background-color: aqua;
+}

@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+
+  --white-color: hsl(0, 0%, 100%);
+  --white-hover-color: hsl(0, 5%, 85%);
+  --primary-color: #115995;
+
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  --font-medium: 500;
+}
