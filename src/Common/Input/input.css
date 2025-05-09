@@ -70,6 +70,26 @@ select {
     /* height: 35px; */
 }
 
+.inp_time{
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 15px;
+}
+
+.time_inp{
+    /* border: 2px solid black; */
+    border-bottom: 2px solid var(--primary-color);
+    width: 25%;
+}
+
+.time_lable{
+    font-weight: 600;
+    color: var(--primary-color);
+    /* border: 1px solid black; */
+}
+
 
 input[type="radio"] {
     -webkit-appearance: none;

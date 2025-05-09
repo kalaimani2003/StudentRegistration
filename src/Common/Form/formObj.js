@@ -144,7 +144,7 @@ export const server_obj = [
         lable: "Coaching Timing",
         type: "time",
         time: ["Start Time", "End Time"],
-        name: "timing",
+        name: ["startTime","endTime"],
         // placeholder: "School or College Name",
         // minLength: 3,
         // maxLength: 50,
@@ -176,7 +176,7 @@ export const server_obj = [
 export const inp_def_vals = {
     name: "",
     DOB: "",
-    gender: "male",
+    gender: "Male",
     photo: "",
     studentNumber: "",
     parentNumber: "",
@@ -189,6 +189,7 @@ export const inp_def_vals = {
     Discount: "",
     studentBatchId: "",
     mentorName: "",
-    timing: "",
+    startTime: "",
+    endTime: "",
     batchStartingDate: "",
 }

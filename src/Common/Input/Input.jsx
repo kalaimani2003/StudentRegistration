@@ -81,23 +81,51 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                             </select>
                                         </div>
                                     </> :
-                                    <>
-                                        <div className="input_text_con" key={atrib.id}>
-                                            <label className='inp_lable' htmlFor={atrib.name}>{atrib.lable} : </label>
-                                            <input className='inp_input'
-                                                onChange={(e) => inpFun(e.target.name, e.target.value)}
-                                                value={inpValues[atrib.name]}
-                                                type={atrib.type}
-                                                key={atrib.id}
-                                                name={atrib.name}
-                                                placeholder={atrib.placeholder}
-                                                id={atrib.name}
-                                                maxLength={atrib.maxLength}
-                                                minLength={atrib.minLength}
-                                            // required
-                                            />
-                                        </div>
-                                    </>
+                                    (atrib.type == "time") ?
+                                        <>
+                                            <div className="input_text_con" key={atrib.id}>
+                                                <label className='inp_lable' htmlFor={atrib.name}>{atrib.lable} : </label>
+                                                <div className="inp_time">
+                                                    <label className='time_lable' htmlFor={atrib.time[0]}>{atrib.time[0]} :</label>
+                                                    <input
+                                                        onChange={(e) => {
+                                                            // console.log(((e.target.value).split(":") > "12") ? ((e.target.value).split(":")[0]-12)+":"+((e.target.value).split(":")[1])  + "PM" : e.target.value + "AM")
+                                                            inpFun(e.target.name, e.target.value)
+                                                        }}
+                                                        name={atrib.name[0]}
+                                                        value={inpValues[atrib.name[0]]}
+                                                        className='time_inp'
+                                                        type="time"
+                                                        id={atrib.time[0]}
+                                                    />
+                                                    <label className='time_lable' htmlFor={atrib.time[1]}>{atrib.time[1]} :</label>
+                                                    <input
+                                                        onChange={(e) => inpFun(e.target.name, e.target.value)}
+                                                        name={atrib.name[1]}
+                                                        value={inpValues[atrib.name[1]]}
+                                                        className='time_inp'
+                                                        type="time"
+                                                        id={atrib.time[1]} />
+                                                </div>
+                                            </div>
+                                        </> :
+                                        <>
+                                            <div className="input_text_con" key={atrib.id}>
+                                                <label className='inp_lable' htmlFor={atrib.name}>{atrib.lable} : </label>
+                                                <input className='inp_input'
+                                                    onChange={(e) => inpFun(e.target.name, e.target.value)}
+                                                    value={inpValues[atrib.name]}
+                                                    type={atrib.type}
+                                                    key={atrib.id}
+                                                    name={atrib.name}
+                                                    placeholder={atrib.placeholder}
+                                                    id={atrib.name}
+                                                    maxLength={atrib.maxLength}
+                                                    minLength={atrib.minLength}
+                                                // required
+                                                />
+                                            </div>
+                                        </>
                 }
             </div>
         </>

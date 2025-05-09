@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Input } from '../Input/Input'
 import { Button } from '@mui/material';
+// import Button from '@mui/material/Button';
 // import Buttonss from '../../Common/Button/Buttonss';
 // import { InputComp } from '../InputComponent/InputComp'
 import "./form.css"
@@ -9,10 +10,11 @@ import "./form.css"
 import Buttonss from '../Button/Buttonss';
 import { ImgFileButtonPopUp } from '../ImgFileButtonPopUp/ImgFileButtonPopUp';
 import { inp_def_vals } from './formObj';
+import axios from 'axios';
 // import { inp_def_vals } from './Form';
 // import { inp_def_vals } from './formobj';
 
-export const Form = ({ form_obj,form_tit }) => {
+export const Form = ({ form_obj, form_tit }) => {
 
   // const [inpValues, setinpValues] = useState({});
   const [inpValues, setinpValues] = useState(inp_def_vals);
@@ -27,7 +29,7 @@ export const Form = ({ form_obj,form_tit }) => {
   const formDataGets = (e) => {
     e.preventDefault();
 
-    // axios.post("http://localhost:3000/posts", inpValues);
+    axios.post("http://localhost:3000/posts", inpValues);
     setinpValues(inp_def_vals);
   }
   return (
@@ -44,8 +46,9 @@ export const Form = ({ form_obj,form_tit }) => {
             </>
           })}
           <div className="formcomp_btns">
-            <Buttonss type={"submit"} value={"Clear All"} variant={"outlined"} buttonFun={inp_def_vals} setButtonFun={setinpValues} />
-            <Buttonss value={"submit"}  variant={"contained"} />
+            <Buttonss value={"Clear All"} variant={"outlined"} buttonFun={inp_def_vals} setButtonFun={setinpValues} />
+            <Button variant='contained' type='submit' color='primary'>Submit</Button>
+                        {/* <Buttonss value={"submit"} type={"submit"} variant={"contained"} /> */}
           </div>
         </form>
 

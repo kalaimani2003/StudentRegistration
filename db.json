@@ -1,14 +1,46 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "a title",
-            "views": 100
-        },
-        {
-            "id": "2",
-            "title": "another title",
-            "views": 200
-        }
-    ]
+  "posts": [
+    {
+      "id": "d845",
+      "name": "",
+      "DOB": "",
+      "gender": "Male",
+      "photo": "",
+      "studentNumber": "",
+      "parentNumber": "",
+      "emailID": "",
+      "city": "",
+      "collegeName": "",
+      "department": "",
+      "Course": "",
+      "courseFees": "",
+      "Discount": "",
+      "studentBatchId": "",
+      "mentorName": "",
+      "startTime": "",
+      "endTime": "",
+      "batchStartingDate": ""
+    },
+    {
+      "id": "df75",
+      "name": "KALAIMANI. K",
+      "DOB": "2003-10-19",
+      "gender": "Male",
+      "photo": "",
+      "studentNumber": "9361027827",
+      "parentNumber": "9786862947",
+      "emailID": "kalaimani2k3@gmail.com",
+      "city": "Chidambaram",
+      "collegeName": "ACET",
+      "department": "CSE",
+      "Course": "Full Stack",
+      "courseFees": "25000",
+      "Discount": "0",
+      "studentBatchId": "25",
+      "mentorName": "Riswan",
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "batchStartingDate": "2025-04-21"
+    }
+  ]
 }
