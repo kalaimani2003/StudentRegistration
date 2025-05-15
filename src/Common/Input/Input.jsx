@@ -31,6 +31,7 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                                 type="radio"
                                                 id={val}
                                                 name={atrib.name}
+                                                required={atrib.required}
                                             />
                                             <label className='radio_lable' htmlFor={val}> {val} </label>
                                         </div>
@@ -42,7 +43,7 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                             <>
                                 <div className="input_text_con" key={atrib.id}>
                                     <label className='inp_lable' htmlFor={atrib.name}>{atrib.lable} : </label>
-                                    <Button className='form_outlined' color='primary' variant="outlined">Take Photo</Button>
+                                    <Button className='form_outlined' color='primary' variant="outlined" onClick={() => {setPop(true)}}>Take Photo</Button>
                                     <Button className='form_outlined' sx={{ marginLeft: "11px" }} color='primary' onClick={() => setPop(true)} variant="outlined">Upload Photo</Button>
                                 </div>
                             </> :
@@ -52,7 +53,7 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                         <label className='inp_lable' htmlFor={atrib.name}>{atrib.lable} : </label>
                                         <input className='inp_input'
                                             onChange={(e) => {
-                                                if (!isNaN(e.target.value) && !(e.target.value).includes(" ")) {
+                                                if (!isNaN(e.target.value) && !(e.target.value).includes(" ") && !(e.target.value).includes(".")) {
                                                     inpFun(e.target.name, e.target.value)
                                                 }
                                             }
@@ -65,7 +66,7 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                             id={atrib.name}
                                             maxLength={atrib.maxLength}
                                             minLength={atrib.minLength}
-                                        // required={true}
+                                            required={atrib.required}
                                         />
                                     </div>
                                 </> :
@@ -73,10 +74,17 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                     <>
                                         <div className="input_text_con" key={atrib.id}>
                                             <label className='inp_lable' htmlFor={atrib.name}>{atrib.lable} : </label>
-                                            <select className='inp_input' onChange={(e) => inpFun(e.target.name, e.target.value)} id={atrib.id} value={inpValues[atrib.name]} name={atrib.name}>
+                                            <select
+                                                required={atrib.required}
+                                                className='inp_input'
+                                                onChange={(e) => inpFun(e.target.name, e.target.value)}
+                                                id={atrib.id}
+                                                value={inpValues[atrib.name]}
+                                                name={atrib.name}
+                                            >
                                                 <option hidden selected >{atrib.placeholder}</option>
                                                 {atrib.options.map((val, i) => {
-                                                    return <option key={i} value={val}>{val}</option>
+                                                    return <option className='select_opts' key={i} value={val}>{val}</option>
                                                 })}
                                             </select>
                                         </div>
@@ -89,7 +97,6 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                                     <label className='time_lable' htmlFor={atrib.time[0]}>{atrib.time[0]} :</label>
                                                     <input
                                                         onChange={(e) => {
-                                                            // console.log(((e.target.value).split(":") > "12") ? ((e.target.value).split(":")[0]-12)+":"+((e.target.value).split(":")[1])  + "PM" : e.target.value + "AM")
                                                             inpFun(e.target.name, e.target.value)
                                                         }}
                                                         name={atrib.name[0]}
@@ -97,6 +104,7 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                                         className='time_inp'
                                                         type="time"
                                                         id={atrib.time[0]}
+                                                        required={atrib.required}
                                                     />
                                                     <label className='time_lable' htmlFor={atrib.time[1]}>{atrib.time[1]} :</label>
                                                     <input
@@ -105,7 +113,10 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                                         value={inpValues[atrib.name[1]]}
                                                         className='time_inp'
                                                         type="time"
-                                                        id={atrib.time[1]} />
+                                                        required={atrib.required}
+                                                        id={atrib.time[1]}
+                                                    />
+
                                                 </div>
                                             </div>
                                         </> :
@@ -122,7 +133,7 @@ export const Input = ({ atrib, setinpValues, inpValues, setPop }) => {
                                                     id={atrib.name}
                                                     maxLength={atrib.maxLength}
                                                     minLength={atrib.minLength}
-                                                // required
+                                                    required={atrib.required}
                                                 />
                                             </div>
                                         </>

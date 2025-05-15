@@ -18,15 +18,14 @@ export const Form = ({ form_obj, form_tit }) => {
 
   // const [inpValues, setinpValues] = useState({});
   const [inpValues, setinpValues] = useState(inp_def_vals);
-  console.log(inpValues);
+  // console.log(inpValues);
   const [pop, setPop] = useState(false);
 
   // console.log(inpValues.additionalProof);
 
-
-
-
   const formDataGets = (e) => {
+    console.log(inpValues);
+
     e.preventDefault();
 
     axios.post("http://localhost:3000/posts", inpValues);
@@ -39,8 +38,9 @@ export const Form = ({ form_obj, form_tit }) => {
         <form action="" className='formcomp_con_in' onSubmit={(e) => formDataGets(e)}>
           {form_obj.map((val, i) => {
             return <>
-              {(val.notShow == (inpValues.additionalProof == "Voter Id") ? false : true || val.notShow == undefined) ?
-                <Input inpValues={inpValues} setinpValues={setinpValues} atrib={val} key={i} setPop={setPop} /> : ""
+              {
+              // (val.notShow == (inpValues.additionalProof == "Voter Id") ? false : true || val.notShow == undefined) ?
+                <Input inpValues={inpValues} setinpValues={setinpValues} atrib={val} key={i} setPop={setPop} /> 
               }
 
             </>
@@ -48,12 +48,14 @@ export const Form = ({ form_obj, form_tit }) => {
           <div className="formcomp_btns">
             <Buttonss value={"Clear All"} variant={"outlined"} buttonFun={inp_def_vals} setButtonFun={setinpValues} />
             <Button variant='contained' type='submit' color='primary'>Submit</Button>
-                        {/* <Buttonss value={"submit"} type={"submit"} variant={"contained"} /> */}
+            {/* <Buttonss value={"submit"} type={"submit"} variant={"contained"} /> */}
           </div>
         </form>
 
-        {
-          (pop) ? <ImgFileButtonPopUp setPop={setPop} /> : ""
+        {pop && (
+          <ImgFileButtonPopUp setPop={setPop} setinpValues={setinpValues} />
+        )
+          // (pop) ? <ImgFileButtonPopUp setPop={setPop} /> : ""
         }
 
 

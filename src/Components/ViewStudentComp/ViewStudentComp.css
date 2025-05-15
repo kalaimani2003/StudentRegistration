@@ -1,5 +1,55 @@
-.ViewStudentComp_con{
+.ViewStudentComp_con {
     /* border: 5px solid rgb(255, 2, 2); */
     height: 100%;
-    width:99% ;
+    width: 99%;
+}
+
+.ViewStudentComp_head {
+    /* border: 2px solid black; */
+    height: 10vh;
+    /* border-radius: 20px; */
+    display:flex ;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.ViewStudentComp_table_con {
+    height: 76vh;
+    /* border: 2px solid black; */
+    overflow: auto;
+    /* color: blue; */
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+
+    /* border-radius: 20px; */
+
+}
+
+.src_inp {
+    padding-left: 0px;
+    /* border: 1px solid black; */
+    height: 100%;
+    width: 87%;
+}
+
+.scr_lab{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+.ViewStudentComp_input_con {
+    border: 2px solid var(--primary-color);
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.ViewStudentComp_input_con:hover{
+    width: 450px;
 }

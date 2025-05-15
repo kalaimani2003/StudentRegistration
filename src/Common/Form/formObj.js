@@ -43,7 +43,7 @@ export const server_obj = [
     {
         id: 5,
         lable: "Parent Number",
-        type: "text",
+        type: "number",
         name: "parentNumber",
         placeholder: "Parent Number",
         minLength: 10,
@@ -118,7 +118,7 @@ export const server_obj = [
         name: "Discount",
         placeholder: "Discount",
         maxLength: 5,
-        required: true,
+        required: false,
     },
     {
         id: 13,
