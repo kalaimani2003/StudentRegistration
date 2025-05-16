@@ -17,8 +17,10 @@
 
 .ViewStudentComp_table_con {
     height: 76vh;
-    /* border: 2px solid black; */
-    overflow: auto;
+    border: 2px solid rgb(231, 0, 0);
+    overflow:auto;
+    width: 100%;
+    /* min-width: 1240px; */
     /* color: blue; */
     /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 
@@ -41,7 +43,10 @@
 }
 
 .ViewStudentComp_input_con {
-    border: 2px solid var(--primary-color);
+    /* border: 2px solid var(--primary-color); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 20px;
+    padding: 3px 10px;
     width: 300px;
     height: 40px;
     display: flex;

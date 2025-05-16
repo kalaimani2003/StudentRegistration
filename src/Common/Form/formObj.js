@@ -57,7 +57,7 @@ export const server_obj = [
         name: "emailID",
         placeholder: "Email ID",
         minLength: 11,
-        maxLength: 30,
+        maxLength: 40,
         required: true,
     },
     {

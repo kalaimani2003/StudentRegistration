@@ -112,7 +112,7 @@ export default function Dashboard() {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
+                    <Typography variant="h6" noWrap component="div" >
                         Admin Dashboard
                     </Typography>
                 </Toolbar>
@@ -151,6 +151,20 @@ export default function Dashboard() {
                         </ListItem>
                     ))}
                 </List>
+                <Divider />
+                <List>
+                    {['LogOut',].map((text, index) => (
+                        <ListItem key={text} disablePadding>
+                            <ListItemButton sx={{ marginTop: "63vh" }} onClick={() => (navigat("/LogOut"))}>
+                                {console.log(index)}
+                                <ListItemIcon>
+                                    {index % 2 === 0 ? <PersonAddAlt1Icon /> : <TableViewIcon />}
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
                 {/* <Divider />
         <List>
           {['All mail', 'Trash', 'Spam'].map((text, index) => (
@@ -165,7 +179,7 @@ export default function Dashboard() {
           ))}
         </List> */}
             </Drawer>
-            <Main open={open} sx={{marginTop:"9vh",height:"91vh"}}>
+            <Main open={open} sx={{ marginTop: "9vh", height: "91vh" }}>
                 <Routees />
             </Main>
         </Box>

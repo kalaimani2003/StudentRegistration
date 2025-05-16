@@ -3,6 +3,7 @@ import "./ViewStudentComp.css";
 import DataTable from '../../Common/table/DataTable';
 import { serverApi } from '../../Common/Api/GetApi';
 import SearchIcon from '@mui/icons-material/Search';
+import { ViewTable } from '../../Common/ViewTable/ViewTable';
 
 export const ViewStudentComp = () => {
   const [originalData, setOriginalData] = useState([]);
@@ -41,7 +42,7 @@ export const ViewStudentComp = () => {
       <div className="ViewStudentComp_con">
         <div className="ViewStudentComp_head">
           <div className="ViewStudentComp_input_con">
-            <label className='scr_lab' htmlFor="src_inpp"><SearchIcon sx={{fontSize:"37px"}}/></label>
+            <label className='scr_lab' htmlFor="src_inpp"><SearchIcon sx={{ fontSize: "37px" }} /></label>
             <input
               className='src_inp'
               id='src_inpp'
@@ -51,9 +52,12 @@ export const ViewStudentComp = () => {
             />
           </div>
         </div>
-        <div className="ViewStudentComp_table_con">
-          <DataTable renderApi={filteredData} />
-        </div>
+        
+          <div className="ViewStudentComp_table_con">
+            <ViewTable renderApi={filteredData} />
+            {/* <DataTable renderApi={filteredData} /> */}
+          </div>
+    
       </div>
     </>
   );
