@@ -51,6 +51,7 @@ img {
     display: grid;
     align-items: center;
     background-color: var(--primary-color);
+    background-color:#3857B9;
 }
 
 .login__img {
@@ -69,6 +70,8 @@ img {
     padding: 2.5rem 1.5rem;
     border-radius: 1rem;
     backdrop-filter: blur(8px);
+    /* background-color:white;
+    color: black; */
 }
 
 .login__title {

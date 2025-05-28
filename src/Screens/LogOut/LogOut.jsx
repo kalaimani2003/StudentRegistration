@@ -1,7 +1,6 @@
 import React from 'react'
+import { LogOutComp } from '../../Components/LogOutComp/LogOutComp'
 
 export const LogOut = () => {
-  return (
-    <div>LogOut</div>
-  )
+  return <LogOutComp/>
 }

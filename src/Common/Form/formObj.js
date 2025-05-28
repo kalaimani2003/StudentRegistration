@@ -95,7 +95,7 @@ export const server_obj = [
         lable: "Course",
         type: "dropdown",
         name: "Course",
-        options: ["Full Stack", "Data Science", "Machine Learning", "Digital Marketing"],
+        options: ["Full Stack", "Data Science", "Machine Learning", "Digital Marketing",],
         placeholder: "Course",
         // minLength: 3,
         // maxLength: 20,

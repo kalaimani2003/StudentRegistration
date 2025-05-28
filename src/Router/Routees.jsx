@@ -9,7 +9,7 @@ export const Routees = () => {
         <Routes>
             <Route path='/' Component={StudentRegistration} />
             <Route path='/ViewStudents' Component={ViewStudents} />
-            <Route path='/LogOut' Component={LogOut} />
+            {/* <Route path='/LogOut' Component={LogOut} /> */}
         </Routes>
     </>
 }

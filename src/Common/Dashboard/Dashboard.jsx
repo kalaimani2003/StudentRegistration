@@ -20,6 +20,8 @@ import TableViewIcon from '@mui/icons-material/TableView';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
 import { Routees } from '../../Router/Routees';
+import { Popup } from '../popup/Popup';
+// import { useContext } from 'react';
 
 const drawerWidth = 240;
 
@@ -92,6 +94,10 @@ export default function Dashboard() {
 
     const navigat = useNavigate();
 
+    // const loginpage_value = useContext(mycontaxt)
+    // console.log(loginpage_value);
+    
+
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -155,7 +161,7 @@ export default function Dashboard() {
                 <List>
                     {['LogOut',].map((text, index) => (
                         <ListItem key={text} disablePadding>
-                            <ListItemButton sx={{ marginTop: "63vh" }} onClick={() => (navigat("/LogOut"))}>
+                            <ListItemButton sx={{ marginTop: "63vh" }} onClick={() => ""}>
                                 {console.log(index)}
                                 <ListItemIcon>
                                     {index % 2 === 0 ? <PersonAddAlt1Icon /> : <TableViewIcon />}

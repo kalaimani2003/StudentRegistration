@@ -5,9 +5,13 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useNavigate } from 'react-router-dom';
 import Dashboard from '../../Common/DashBoard/Dashboard';
+import { createContext } from 'react';
+
 
 
 export const LoginPage = () => {
+    const mycontaxt = createContext();
+
 
     const [submit, setSubmit] = useState(true);
     const [username, setUsername] = useState('');
@@ -128,7 +132,10 @@ export const LoginPage = () => {
                     </p>
                 </form>
             </div> :
-                <Dashboard />
+
+                <mycontaxt.Provider value={setSubmit}>
+                    <Dashboard />
+                </mycontaxt.Provider>
             }
 
         </>

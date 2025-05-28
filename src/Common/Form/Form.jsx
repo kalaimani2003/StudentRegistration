@@ -18,7 +18,7 @@ export const Form = ({ form_obj, form_tit }) => {
 
   // const [inpValues, setinpValues] = useState({});
   const [inpValues, setinpValues] = useState(inp_def_vals);
-  // console.log(inpValues);
+  console.log(inpValues);
   const [pop, setPop] = useState(false);
 
   // console.log(inpValues.additionalProof);
@@ -35,7 +35,7 @@ export const Form = ({ form_obj, form_tit }) => {
     <>
       <div className="formcomp_con">
         <h1>{form_tit}</h1>
-        <form action="" className='formcomp_con_in' onSubmit={(e) => formDataGets(e)}>
+        <form action="" method='post' className='formcomp_con_in' onSubmit={(e) => formDataGets(e)}>
           {form_obj.map((val, i) => {
             return <>
               {
